@@ -22,7 +22,7 @@ class LazyLoadUITests: XCTestCase {
         XCTAssertTrue(lazyLoadPage.verifyCellExists(with: 1))
         
         // Check if #67 Exists (Unloaded)
-        lazyLoadPage.verticalScrollView.swipeUpTo(element: lazyLoadPage.verticalCell67, maxAttempts: 10, velocity: 1000)
+        lazyLoadPage.verticalScrollView.swipeUpTo(element: lazyLoadPage.verticalCell67, maxAttempts: 20, velocity: 1000)
         XCTAssertTrue(lazyLoadPage.verticalCell67.exists)
         
         // Go to bottom of LazyVStack
@@ -32,7 +32,7 @@ class LazyLoadUITests: XCTestCase {
         XCTAssertTrue(lazyLoadPage.verifyCellExists(with: 99))
         
         // Check if #17 Exists (Unloaded)
-        lazyLoadPage.verticalScrollView.swipeDownTo(element: lazyLoadPage.verticalCell17, maxAttempts: 10, velocity: 1000)
+        lazyLoadPage.verticalScrollView.swipeDownTo(element: lazyLoadPage.verticalCell17, maxAttempts: 20, velocity: 1000)
         XCTAssertTrue(lazyLoadPage.verticalCell17.exists)
         
         // Go to top of LazyVStack
